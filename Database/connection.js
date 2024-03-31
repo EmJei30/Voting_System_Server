@@ -4,11 +4,11 @@ require('dotenv').config();
 const path = require('path');
 
 const connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-    port: process.env.DB_PORT,
+    host: 'erp-voting.mysql.database.azure.com',
+    user: 'erpadmin',
+    password: 'P@$$w0rd@2024',
+    database: 'election_system',
+    port: '3306',
     ssl: {
       ca: fs.readFileSync(path.join(__dirname, 'DigiCertGlobalRootCA.crt.pem'))
     } 
